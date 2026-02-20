@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serendipity - Sign Up</title>
+
+<link rel="stylesheet" href="signup.css">
+
+</head>
+<body>
+
+<header>
+<div class="logo">❤ Serendipity</div>
+
+<nav>
+<a href="#">Our Story</a>
+<a href="#">Safety</a>
+<a href="#">Success Stories</a>
+<a href="login.html" class="login-btn">Log In</a>
+</nav>
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h1>Begin Your Story</h1>
+<p class="subtitle">
+Join a community built on genuine connections and verified safety.
+</p>
+
+<form id="signupForm">
+
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+
+<label>Email Address</label>
+<input type="email" id="email" placeholder="email@example.com" required>
+
+<label>Password</label>
+<input type="password" id="password" placeholder="Create a secure password" required>
+
+<button type="submit">Create Account ✨</button>
+
+</form>
+
+<div class="verified">
+✔ 100% VERIFIED BACKGROUNDS
+</div>
+
+<p class="login-link">
+Already have an account?
+<a href="login.html">Log In</a>
+</p>
+
+</div>
+
+</div>
+
+<div class="hearts"></div>
+
+<script src="signup.js"></script>
+<script type="module">
+  // 1. Import the database functions from Google's servers
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  // 2. Your specific keys (This tells the code to send data to "safematch")
+  const firebaseConfig = {
+    apiKey: "AIzaSyA0LwEl8kXRfyaVT2bQ4rG551AP2BB0ifY",
+    authDomain: "safematch-4d2b3.firebaseapp.com",
+    projectId: "safematch-4d2b3",
+    storageBucket: "safematch-4d2b3.firebasestorage.app",
+    messagingSenderId: "789443166284",
+    appId: "1:789443166284:web:1fea81ac2befda775734e9"
+  };
+
+  // 3. Initialize the connection
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // 4. This is the function that runs when you click the button
+  window.signUpUser = async function() {
+    // These lines "grab" what you typed in the input boxes
+    const name = document.querySelector('input[placeholder="Full Name"]').value;
+    const email = document.querySelector('input[placeholder="Email"]').value;
+    const age = document.querySelector('input[placeholder="Age"]').value;
+
+    try {
+      // This part creates a folder called "users" in Firebase and saves the data
+      const docRef = await addDoc(collection(db, "users"), {
+        fullName: name,
+        email: email,
+        age: age,
+        joinedAt: new Date() // Records exactly when they signed up
+      });
+      
+      alert("Profile Created! Welcome to Safematch ❤️");
+      window.location.href = "loged.html"; // Takes you to your next page automatically
+    } catch (e) {
+      console.error("Error: ", e);
+      alert("Make sure you turned on 'Test Mode' in your Firebase Browser tab!");
+    }
+  }
+</script>
+</body>
+</html>

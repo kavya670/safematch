@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraDating Discovery Dashboard</title>
+
+<link rel="stylesheet" href="loged.css">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body class="bg-background-light font-sans min-h-screen dreamy-bg">
+
+<div class="relative z-10 flex h-screen overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="w-72 glass-panel m-6 rounded-xl flex flex-col justify-between p-6">
+
+<div>
+<h2 class="text-2xl font-bold text-primary">❤ AuraDating</h2>
+
+<nav class="mt-8 space-y-2">
+<button class="menu-btn active">Discovery</button>
+<a href="myprofile.html"><button class="menu-btn">Profile</button></a>
+<button class="menu-btn">Messages</button>
+<a href="matches.html"><button class="menu-btn">Matches</button></a>
+<button class="menu-btn">Settings</button>
+</nav>
+</div>
+
+<div class="premium">
+<p>Aura Premium</p>
+<button>Upgrade Now</button>
+</div>
+
+</aside>
+
+
+<!-- Main Content -->
+<main class="flex-1 p-10 overflow-y-auto">
+
+<h1 class="text-5xl font-bold mb-2">
+Welcome to AuraDating, <span id="username">User</span>
+</h1>
+
+<p class="mb-10 text-lg">The universe is aligning your stars today ✨</p>
+
+
+<h2 class="text-3xl font-bold mb-6">Nearby Souls</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://i.pravatar.cc/400?img=5">
+<h3>Elora, 24</h3>
+<p>98% Compatibility</p>
+<a href="profile.html"><button onclick="like(this)">❤ Like</button></a>
+</div>
+
+<div class="card">
+<img src="https://i.pravatar.cc/400?img=12">
+<h3>Marcus, 28</h3>
+<p>85% Compatibility</p>
+<a href="profile.html"><button onclick="like(this)">❤ Like</button></a>
+</div>
+
+<div class="card">
+<img src="https://i.pravatar.cc/400?img=23">
+<h3>Amara, 26</h3>
+<p>92% Compatibility</p>
+<a href="profile.html"><button onclick="like(this)">❤ Like</button></a>
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="loged.js"></script>
+
+</body>
+</html>

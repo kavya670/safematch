@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f6f7fb;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: bold;
+    color: #ff4d6d;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+nav .active {
+    color: #ff4d6d;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* LEFT */
+.profile-left {
+    position: relative;
+}
+
+.profile-pic {
+    width: 350px;
+    border-radius: 20px;
+}
+
+.online {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #ff4d6d;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* RIGHT */
+.profile-right {
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.location {
+    color: #888;
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #eef1ff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* SAFETY */
+.safety {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#messageBtn {
+    background: linear-gradient(90deg, #ff4d6d, #ff758f);
+    color: white;
+    margin-right: 10px;
+}
+
+.fav {
+    background: white;
+    border: 2px solid #ff4d6d;
+    color: #ff4d6d;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
