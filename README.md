@@ -13,7 +13,7 @@
 - Member 2: [Kavya Suresh] - [Adi Shankara institute of engineering and technology ]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://safematch.onrender.com/
 
 ### Project Description
 [Safe match is a smart dating platform that prioritizes user safety and genuine connections by matching people based on compatibility and verified profiles. Its key feature is a criminal record verification system that helps ensure users interact only with safe and trustworthy individuals. This addresses the growing concern of fake identities and safety risks in existing dating apps, creating a more secure and reliable environment for meaningful relationships.]
